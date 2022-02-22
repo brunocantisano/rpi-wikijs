@@ -57,3 +57,22 @@ docker run --name wikijs -d -p 9416:3000 \
            -v `pwd`/files/wikijs/config.yml:/var/wiki/config.yml \
            paperinik/rpi-wikijs
 ```
+4) Database settings, change these data inside config.yml:
+
+* postgres
+
+```yml
+type: postgres
+host: localhost
+port: 5432
+user: wikijs
+pass: wikijsrocks
+db: wiki
+```
+
+* sqlite:
+
+```yml
+type: sqlite
+storage: /var/wiki/database.sqlite
+```
